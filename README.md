@@ -1,6 +1,6 @@
 # DAY 15 WORKSHOP - Contacts List with Redis
 - Create a webapp with the following functions
-  - Show all 
+  - Show all contacts
   - Create new contact
   - Edit existing contact
   - Delete existing contact
