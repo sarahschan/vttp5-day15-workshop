@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+<body class="container">
+
+    <div>
+        <h1>This is contacts.html</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi vitae architecto ipsum, perferendis est velit nihil incidunt inventore illum neque, doloribus doloremque eaque maxime atque optio deserunt nostrum quae?</p>
+    </div>
+
+    <br>
+    
+    <div>
+        <a class="btn btn-primary" th:href="@{/contacts/create}">Create New Contact</a>
+    </div>
+
+    <br>
+
+    <div>
+        <h2>Contacts List</h2>
+        <ul>
+            <li th:each="contact : ${contactList}">
+                <a th:href="@{/contacts/{id}(id=${contact.id})}" th:text="${contact.name}"></a>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>
